@@ -1,0 +1,20 @@
+[21-Jan-2022 20:55:50 UTC] PHP Warning:  include(header.php): failed to open stream: No such file or directory in /home/atcrfo1ll8o4/public_html/truckmin.pe/index.php on line 50
+[21-Jan-2022 20:55:50 UTC] PHP Warning:  include(): Failed opening 'header.php' for inclusion (include_path='.:/opt/alt/php73/usr/share/pear') in /home/atcrfo1ll8o4/public_html/truckmin.pe/index.php on line 50
+[21-Jan-2022 20:55:50 UTC] PHP Warning:  include(header_2.php): failed to open stream: No such file or directory in /home/atcrfo1ll8o4/public_html/truckmin.pe/index.php on line 51
+[21-Jan-2022 20:55:50 UTC] PHP Warning:  include(): Failed opening 'header_2.php' for inclusion (include_path='.:/opt/alt/php73/usr/share/pear') in /home/atcrfo1ll8o4/public_html/truckmin.pe/index.php on line 51
+[21-Jan-2022 20:55:50 UTC] PHP Warning:  include(slider.php): failed to open stream: No such file or directory in /home/atcrfo1ll8o4/public_html/truckmin.pe/index.php on line 52
+[21-Jan-2022 20:55:50 UTC] PHP Warning:  include(): Failed opening 'slider.php' for inclusion (include_path='.:/opt/alt/php73/usr/share/pear') in /home/atcrfo1ll8o4/public_html/truckmin.pe/index.php on line 52
+[21-Jan-2022 20:55:50 UTC] PHP Warning:  include(footer.php): failed to open stream: No such file or directory in /home/atcrfo1ll8o4/public_html/truckmin.pe/index.php on line 1764
+[21-Jan-2022 20:55:50 UTC] PHP Warning:  include(): Failed opening 'footer.php' for inclusion (include_path='.:/opt/alt/php73/usr/share/pear') in /home/atcrfo1ll8o4/public_html/truckmin.pe/index.php on line 1764
+[15-Feb-2024 14:23:03 America/Chicago] PHP Warning:  mysqli::__construct(): php_network_getaddresses: getaddrinfo for root failed: Name or service not known in /home4/movilnet/truckmin.pe/formulario1.php on line 9
+[15-Feb-2024 14:23:03 America/Chicago] PHP Fatal error:  Uncaught mysqli_sql_exception: php_network_getaddresses: getaddrinfo for root failed: Name or service not known in /home4/movilnet/truckmin.pe/formulario1.php:9
+Stack trace:
+#0 /home4/movilnet/truckmin.pe/formulario1.php(9): mysqli->__construct('root', 'movilnet_moviln', '', 'departamentos')
+#1 {main}
+  thrown in /home4/movilnet/truckmin.pe/formulario1.php on line 9
+[16-Feb-2024 08:27:15 America/Chicago] PHP Warning:  mysqli::__construct(): php_network_getaddresses: getaddrinfo for root failed: Name or service not known in /home4/movilnet/truckmin.pe/formulario1.php on line 9
+[16-Feb-2024 08:27:15 America/Chicago] PHP Fatal error:  Uncaught mysqli_sql_exception: php_network_getaddresses: getaddrinfo for root failed: Name or service not known in /home4/movilnet/truckmin.pe/formulario1.php:9
+Stack trace:
+#0 /home4/movilnet/truckmin.pe/formulario1.php(9): mysqli->__construct('root', 'movilnet_moviln', '', 'departamentos')
+#1 {main}
+  thrown in /home4/movilnet/truckmin.pe/formulario1.php on line 9

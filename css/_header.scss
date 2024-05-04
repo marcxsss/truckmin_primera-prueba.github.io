@@ -1,0 +1,47 @@
+#header {
+    background: #072348;
+    padding:10px 0;
+    height: 80px;
+  }
+
+  #header #logo {
+    float: left;
+  }
+
+  #header #logo h1 {
+    font-size: 36px;
+    margin: 0;
+    padding: 6px 0;
+    line-height: 1;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+  }
+
+
+  #header #logo h1 a, #header #logo h1 a:hover {
+    color: #fff;
+  }
+
+  #header #logo img {
+ 
+    max-height: 70px;
+    max-width: 100%;
+  }
+
+  @media (max-width: 768px) {
+    #header {
+      height: 80px;
+    }
+    #header #logo h1 {
+      font-size: 26px;
+    }
+    #header #logo img {
+      max-height: 40px;
+    }
+  }
+
+  .is-sticky #header {
+    background: rgba(7, 35, 72, 0.85);
+  }

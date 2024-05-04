@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <title>Truckmin Group</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="" name="keywords">
+  <meta content="" name="description">
+
+  <!-- Facebook Opengraph integration: https://developers.facebook.com/docs/sharing/opengraph -->
+  <meta property="og:title" content="">
+  <meta property="og:image" content="">
+  <meta property="og:url" content="">
+  <meta property="og:site_name" content="">
+  <meta property="og:description" content="">
+
+  <!-- Twitter Cards integration: https://dev.twitter.com/cards/  -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="">
+  <meta name="twitter:title" content="">
+  <meta name="twitter:description" content="">
+  <meta name="twitter:image" content="">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  <!-- Place your favicon.ico and apple-touch-icon.png in the template root directory -->
+  <link href="img/iconTuckmin.png" rel="icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  
+  <!-- Bootstrap CSS File -->
+  <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"rel="stylesheet">
+  <!-- Libraries CSS Files
+  <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet"> -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+  <link href="lib/animate-css/animate.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-Dd5N2q2O46uiUZapakNqOXbqAsSVz/IlCPhgAIZ3L6eZt9z0KyimS+RplOJ8Xi7A/Z9zE81PHj9LcGoRiCblXw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Main Stylesheet File -->
+  <link href="css/style.css" rel="stylesheet">
+       <link href="css/chatbox.css" rel="stylesheet">
+
+   <!--  <link rel="shortcut icon" href="img/" type="image/x-icon">-->
+
+  </head>
+
+<style>
+
+  #hero {
+    display: table; 
+    height: 30vh;
+    background: url('img/prueba/productos.jpg')  ; /* Cambia 'nueva/ruta/de/tu/imagen.jpg' con la ruta de tu nueva imagen de fondo */
+    background-size: cover;
+    
+  }
+  .list-group-item {
+  background-color: #F9F9F9;      
+  }
+
+
+
+    .form-control {
+        margin-top: 15px;
+        width:70%;
+      }
+    .clase1,
+    .clase2 {
+      margin-top: 20px;
+      
+    }
+  
+    .clase2 img {
+        width: 70%;
+        height: auto;
+        margin-bottom: 20px;
+        transition: transform 0.3s ease-in-out;
+      }
+      .image-container img {
+      max-height: 150px;
+      display: block;
+      margin: 0 auto; /* Centra la imagen dentro del contenedor */
+      }
+    .image-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 350px;
+      overflow: hidden;
+      margin-top: 10%;
+      padding: 20px;
+      border-radius: 15px solid  #070707;
+      text-align: left;
+      text-align: center;
+      }
+
+  /* efecto del botton */
+      .image-container p {
+        font-size: 18px; /* Ajusta el tamaño del texto según sea necesario */
+        margin: 0; /* Elimina el margen predeterminado del párrafo */
+      }
+    
+      .image-container button:hover {
+        background-color: #FFD71D; /* Cambia el color de fondo al pasar el ratón */
+      }
+      a{
+      font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-weight: bold;
+      }
+      .image-container p {
+        font-size: 16px; /* Tamaño del texto ajustado a 16px */
+        margin: 0; /* Elimina el margen predeterminado del párrafo */
+      }
+      .image-container:hover img {
+        transform: scale(1.1); /* Escalamos la imagen al 110% cuando se hace hover */
+  
+      }
+      .image-container.clicked {
+        transform: scale(1.2); 
+      }
+    /* fin de efecto */
+
+    
+      
+    .filtered {
+          border: 2px solid #FFD71D;
+          background-color: #f7f7f7;
+          
+      } 
+    .imglogo img{
+        padding: 10px;
+        width:300px;
+        height:350px;
+      }
+          
+    .card-title span {
+          color: #ffffff;
+          font-weight: 400;
+          font-size: 24px;
+      }
+
+      .box {
+        display: flex;
+        align-items: center;
+      }
+
+      input {
+      outline: none;
+      border: none;
+      padding: 0px;
+      width: 70px;
+      height: 40px; /* Adjusted height */
+
+      }
+
+      .image-container button {
+      background-color: #072348;
+      border: none;
+      margin-top: 10%;
+      color: #fff;
+      padding:8px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s ease-in-out;
+      border-radius: 1px 10px 10px 1px; /* Ajustar el borde superior izquierdo y el inferior izquierdo */
+
+      }
+
+      .cotizar-input {
+      width: 70px; /* Ancho ajustado */
+      height: 38px; /* Altura ajustada */
+      background-color: rgb(255, 255, 255);
+      color: black;
+      border: 1px solid #072348;
+      padding: 5px 10px 5px 10px;
+      border-radius: 10px 0px 0px 10px; /* Ajustar el borde superior izquierdo y el inferior izquierdo */
+
+      }
+
+
+      .cotizar-container {
+      display: flex;
+      align-items: baseline;
+      }
+
+
+
+      /*  */
+   /* Estilo mejorado para el botón desplegable */
+      .accordion-button-pro {
+      background-color: #072348;
+      color: #fff;
+      padding: 10px 20px;
+      width: 100%;
+      font-size: 16px;
+      cursor: pointer;
+      text-align: left;
+      border: 1px solid #072348;
+      border-radius: 5px;
+      position: relative; /* Añadido para posicionar de forma relativa */
+      transition: background-color 0.3s ease-in-out;
+      }
+
+      /* Añadido para posicionar el icono de flecha */
+      .accordion-button-pro .fa-angle-down {
+      position: absolute;
+      right: 20px; /* Ajusta la posición derecha según tus preferencias */
+      top: 50%; /* Coloca la flecha en el centro vertical */
+      transform: translateY(-50%);
+      transition: transform 0.3s ease-in-out; /* Transición para la rotación */
+      }
+
+      /* Estilo para los elementos dentro del botón desplegable */
+      .accordion-collapse {
+      padding: 10px;
+      /* background-color: #F9F9F9; */
+      font-weight: 400;
+      font-size: 15px;
+      color: #072348;
+      }
+
+      .accordion-button-pro.collapsed .fa-angle-down {
+      transform: translateY(-50%) rotate(180deg);
+      }
+      .form-check input[type="checkbox"], .form-check input[type="radio"] {
+      margin: 0; 
+      line-height: normal;
+      width: 30px;
+      margin-right: 10px;
+      }
+      .form-check {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+      }
+.card-title span {
+    color: #072348;
+    font-weight: 400;
+    font-size: 15px;
+  }
+   
+</style>
+<div class="top-bar d-none d-md-flex align-items-center justify-content-between">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="text">
+                    <i class="fa-solid fa-phone"></i>
+                    <a href="tel:015022587" >Ventas 955 302 160</a>&nbsp;&nbsp;&nbsp;&nbsp;
+
+                    <i class="fa fa-envelope" ></i>
+                    <a href="mailto:ventas@truckmin.pe">Ventas@truckmin.pe</a>
+                </div>
+            </div>
+            <div class="col-md-6 d-flex justify-content-end">
+                <a class="btn" href="https://m.facebook.com/profile.php/?id=100065113025557" target="_blank">
+                    <i class="fa-brands fa-facebook" style="color: #FFD43B; font-size: 20px;"></i>
+                </a>
+                <a class="btn" href="https://api.whatsapp.com/send?phone=51955302160" target="_blank">
+                    <i class="fa-brands fa-whatsapp fa-lg" style="color: #FFD43B; font-size: 20px;"></i>
+                </a>
+                <a class="btn" href="https://www.instagram.com/truckmingroupperu" target="_blank">
+                    <i class="fa-brands fa-instagram fa-lg" style="color: #FFD43B; font-size: 20px;"></i>
+                </a>
+                <a class="btn" href="https://acortar.link/kT5fpo" target="_blank">
+                    <i class="fa-brands fa-linkedin" style="color: #FFD43B; font-size: 20px;"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<header id="header">
+  <div class="container">
+
+    <div id="logo" class="pull-left">
+      <a href="index.html"><img src="img/logowhite.png" alt="Truckmin2" title=""></a>
+      <!-- Descomenta abajo si prefieres usar una imagen de texto -->
+      <!--<h1><a href="#hero">Encabezado 1</a></h1>-->
+    </div>
+
+     <nav id="nav-menu-container">
+        <ul class="nav-menu">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="nosotros.html">Nosotros</a></li>
+          <li class="menu-active"><a href="productos.html">Productos</a></li>
+          <li class="dropdown">
+            <a href="#"class="nav-link dropdown-toggle">Alquiler</a>
+            <div class="dropdown-content">
+              <a href="maquinas.html">Maquinarias</a>
+            </div>
+          </li>
+          <li><a href="consultoria.html">Consultoría</a></li>
+          <li><a href="contactanos.php">Contacto</a></li>
+        </ul>
+      </nav>
+    
+  </div>
+</header>
+    
+<body>
+<section id="hero">
+  <div class="hero-container">
+    <h2 class="card-title" style="font-size: 33px;color: #ffffff;"> ROPA INDUSTRIAL <br></h2>
+  </div>
+</section>
+
+<div class="container wow fadeInUp">
+  <div class="row" style="margin-top: 35px;">
+
+    <div class="col-md-3">
+      <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
+      </form><br><br>
+
+      <div class="accordion-item acordion-pro">
+        <h2 class="accordion-header-pro">
+          <button class="accordion-button-pro collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+            <div class="section-tittle-consul-pro">Categorías<i class="fa-solid fa-angle-down" style="color: #ffffff;"></i></div>
+          </button>
+        </h2>
+        <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+          <div class="border-accordion-pro">
+            <div class="section-title-divider-pro"></div><br>
+
+            <div class="form-check">
+              <input class="form-check" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                Protección de cabeza
+            </div>
+            <div class="form-check">
+              <input class="form-check" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+                Protección de manos
+            </div>
+            <div class="form-check">
+              <input class="form-check" type="radio" name="flexRadioDefault" id="flexRadioDefault3">
+                Zapatos de seguridad
+              
+            </div>
+            <div class="form-check">
+              <input class="form-check" type="radio" name="flexRadioDefault" id="flexRadioDefault4">
+                Ropa industrial
+            </div>
+
+          </div>
+        </div>
+      </div><br><br>
+
+      <!-- <div class="accordion-item acordion-pro">
+        <h2 class="accordion-header-pro">
+          <button class="accordion-button-pro collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+            <div class="section-tittle-consul-pro">Marcas<i class="fa fa-angle-down" style="color: #ffffff;"></i></div>
+          </button>
+        </h2>
+        <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+          <div class="border-accordion-pro">
+            <div class="section-title-divider-pro"></div><br>
+
+            <div class="form-check">
+              <input class="form-check" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                Protección de cabeza
+            </div>
+            <div class="form-check">
+              <input class="form-check" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+                Protección de manos
+             
+            </div>
+            <div class="form-check">
+              <input class="form-check" type="radio" name="flexRadioDefault" id="flexRadioDefault3">
+                Protección de pies
+            </div>
+            <div class="form-check">
+              <input class="form-check" type="radio" name="flexRadioDefault" id="flexRadioDefault4">
+                Ropa industrial
+            </div>
+
+          </div>
+        </div>
+      </div> -->
+
+    </div>
+
+    <div class="col-md-9">
+  
+      <div class="col-md-4 mb-4">
+        <div class="image-container border">
+          <img src="img/ROPA INDUSTRIAL/Camisa Jean Demin 14 onz.jpg" >
+          <p class="card-title" style="font-size: 24PXx;"> NACIONAL<br><span>Camisa Jean Demin 14</span></p>
+          <div class="cotizar-container">
+            <div class="box">
+              <input type="number" id="quantityInput" value="1" class="cotizar-input">
+            </div>
+            <a href="https://api.whatsapp.com/send?phone=51955302160&text=Hola,%20somos%20Truckmin%20Group%20Per%C3%BA%20%C2%BFC%C3%B3mo%20podemos%20ayudarte%20hoy?" target="_blank" class="cotizarButton" data-phone-number="51955302160" data-message="Hola, estoy interesado en cotizar {quantity} unidades del producto ACF 300.">
+              <button type="button"><i class="fa-solid fa-cart-shopping" style="color: #ffffff;"></i> &nbsp;COTIZAR</button>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 mb-4">
+        <div class="image-container border">
+          <img src="img/ROPA INDUSTRIAL/Chaleco de Malla Execetive Madrid.jpg"alt="" >
+          <p class="card-title" style="font-size: 24PXx;"> DELTA<br><span>Chaleco de Malla Execetive</span></p>
+          <div class="cotizar-container">
+            <div class="box">
+              <input type="number" id="quantityInput" value="1" class="cotizar-input">
+            </div>
+            <a href="https://api.whatsapp.com/send?phone=51955302160&text=Hola,%20somos%20Truckmin%20Group%20Per%C3%BA%20%C2%BFC%C3%B3mo%20podemos%20ayudarte%20hoy?" target="_blank" class="cotizarButton" data-phone-number="51955302160" data-message="Hola, estoy interesado en cotizar {quantity} unidades del producto ACF 300.">
+              <button type="button"><i class="fa-solid fa-cart-shopping" style="color: #ffffff;"></i> &nbsp;COTIZAR</button>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 mb-4">
+        <div class="image-container border">
+          <img src="img/ROPA INDUSTRIAL/Chaleco Drill Tipo H color Naranja.jpg" alt="">
+          <p class="card-title" style="font-size: 24PXx;"> STEELPRO<br><span>Chaleco Drill Tipo H</span></p>
+          <div class="cotizar-container">
+            <div class="box">
+              <input type="number" id="quantityInput" value="1" class="cotizar-input">
+            </div>
+            <a href="https://api.whatsapp.com/send?phone=51955302160&text=Hola,%20somos%20Truckmin%20Group%20Per%C3%BA%20%C2%BFC%C3%B3mo%20podemos%20ayudarte%20hoy?" target="_blank" class="cotizarButton" data-phone-number="51955302160" data-message="Hola, estoy interesado en cotizar {quantity} unidades del producto ACF 300.">
+              <button type="button"><i class="fa-solid fa-cart-shopping" style="color: #ffffff;"></i> &nbsp;COTIZAR</button>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 mb-4">
+        <div class="image-container border">
+          <img src="img/ROPA INDUSTRIAL/Chaqueta Bizflame Rain Multi Protection S770 - Portwest.png" alt="">
+          <p class="card-title" style="font-size: 24PXx;"> PORTWEST<br><span>Chaqueta Bizflame Rain</span></p>
+          <div class="cotizar-container">
+            <div class="box">
+              <input type="number" id="quantityInput" value="1" class="cotizar-input">
+            </div>
+            <a href="https://api.whatsapp.com/send?phone=51955302160&text=Hola,%20somos%20Truckmin%20Group%20Per%C3%BA%20%C2%BFC%C3%B3mo%20podemos%20ayudarte%20hoy?" target="_blank" class="cotizarButton" data-phone-number="51955302160" data-message="Hola, estoy interesado en cotizar {quantity} unidades del producto ACF 300.">
+              <button type="button"><i class="fa-solid fa-cart-shopping" style="color: #ffffff;"></i> &nbsp;COTIZAR</button>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 mb-4">
+        <div class="image-container border">
+        <img src="img/ROPA INDUSTRIAL/Mameuco Bizfame FR5 - Portwest.jpg" alt="">
+        <p class="card-title" style="font-size: 24PXx;"> PORTWEST<br><span>Mameluco Bizfame FR5</span></p>
+        <div class="cotizar-container">
+          <div class="box">
+            <input type="number" id="quantityInput" value="1" class="cotizar-input">
+          </div>
+          <a href="https://api.whatsapp.com/send?phone=51955302160&text=Hola,%20somos%20Truckmin%20Group%20Per%C3%BA%20%C2%BFC%C3%B3mo%20podemos%20ayudarte%20hoy?" target="_blank" class="cotizarButton" data-phone-number="51955302160" data-message="Hola, estoy interesado en cotizar {quantity} unidades del producto ACF 300.">
+            <button type="button"><i class="fa-solid fa-cart-shopping" style="color: #ffffff;"></i> &nbsp;COTIZAR</button>
+          </a>
+        </div>
+      </div>
+      </div>
+
+      <div class="col-md-4 mb-4">
+        <div class="image-container border">
+        <img src="img/ROPA INDUSTRIAL/Traje Tyvek con cinta reflectiva.jpg" alt="">
+        <p class="card-title" style="font-size: 24PXx;">LAKELAN<br><span>Traje Tyvek Reflectivas</span></p>
+        <div class="cotizar-container">
+          <div class="box">
+            <input type="number" id="quantityInput" value="1" class="cotizar-input">
+          </div>
+          <a href="https://api.whatsapp.com/send?phone=51955302160&text=Hola,%20somos%20Truckmin%20Group%20Per%C3%BA%20%C2%BFC%C3%B3mo%20podemos%20ayudarte%20hoy?" target="_blank" class="cotizarButton" data-phone-number="51955302160" data-message="Hola, estoy interesado en cotizar {quantity} unidades del producto ACF 300.">
+            <button type="button"><i class="fa-solid fa-cart-shopping" style="color: #ffffff;"></i> &nbsp;COTIZAR</button>
+          </a>
+        </div>
+      </div>
+      </div>
+    </div>
+  </div>  
+  </div>
+</div>
+<br><br><br><br>
+<div class="fb_loader" style="text-align: center !important; display: none;"><img src="https://ruedemas.com/wp-content/plugins/facebook-pagelike-widget/loader.gif" alt="Facebook Pagelike Widget"></div>
+
+
+<footer id="footer">
+  <div class="container">
+
+    <div class="row">
+      <div class="col-lg-1">
+      </div>
+
+      <div class="col-lg-4" style="margin-top: 4%; text-align: center;"><!--SECCCION LOGO-->
+        <a href="/"><img src="img/logowhite.png" width="75%"></a>
+        <h6 style="color:white;" ><br><br>MAQUINARIA - MINERÍA - ENERGÍA<br>CONSULTORÍA AMBIENTAL - SEGURIDAD INDUSTRIAL</h6>
+      </div><br>
+                        <div class="col-lg-1">
+      </div> 
+      <div class="col-lg-2"><!--LISTA MENU-->
+        <div class="section-description2" style="color: white;"><h5><strong>TRUCKMIN GROUP</strong></h5></div>
+        <div class="section-title-divider-3"></div><br>
+        <div class="section-title-dividerf"></div>
+        <div class="descrip-menu"><a class="list-footer" href="nosotros.html" ><h4 style="font-size: 11px;">    <i class="fa-solid fa-caret-right" style="color: #ffd71d;"></i> &nbsp; NOSOTROS</h4></a></div>
+        <div class="descrip-menu"><a class="list-footer" href="productos.html" ><h4 style="font-size: 11px;">   <i class="fa-solid fa-caret-right" style="color: #ffd71d;"></i> &nbsp; PRODUCTOS</h4></a></div>
+        <div class="descrip-menu"><a class="list-footer" href="#" ><h4 style="font-size: 11px;">    <i class="fa-solid fa-caret-right" style="color: #ffd71d;"></i> &nbsp; ALQUILER</h4></a></div>
+        <div class="descrip-menu"><a class="list-footer" href="consultoria.html" ><h4 style="font-size: 11px;"> <i class="fa-solid fa-caret-right" style="color: #ffd71d;"></i> &nbsp; CONSULTORIA</h4></a></div>
+        <div class="descrip-menu"><a class="list-footer" href="contactanos.html" ><h4 style="font-size: 11px;"> <i class="fa-solid fa-caret-right" style="color: #ffd71d;"></i> &nbsp; CONT&Aacute;CTANOS</h4></a></div>
+      </div>
+
+      <div class="col-lg-2"><!--CATEGORIA PRODUCTOS-->
+        <div class="section-description2" style="color: white;"><h5><strong>CTG. PRODUCTOS</strong></h5></div>
+        <div class="section-title-divider-3"></div><br>
+        <div class="section-title-dividerf"></div>
+        <div class="descrip-menu"><a class="list-footer" href="cabeza.html" ><h4 style="font-size: 11px;">    <i class="fa-solid fa-caret-right" style="color: #ffd71d;"></i> &nbsp; PROTECCI&Oacute;N DE<br> &nbsp;&nbsp;&nbsp; CABEZA</h4></a></div>
+        <div class="descrip-menu"><a class="list-footer" href="mano.html" ><h4 style="font-size: 11px;">    <i class="fa-solid fa-caret-right" style="color: #ffd71d;"></i> &nbsp; PROTECCI&Oacute;N DE<br> &nbsp;&nbsp;&nbsp; MANOS</h4></a></div>
+        <div class="descrip-menu"><a class="list-footer" href="pie.html" ><h4 style="font-size: 11px;"> <i class="fa-solid fa-caret-right" style="color: #ffd71d;"></i> &nbsp; ZAPATOS DE SEGURIDAD</h4></a></div>
+        <div class="descrip-menu"><a class="list-footer" href="ropa.html" ><h4 style="font-size: 11px;">   <i class="fa-solid fa-caret-right" style="color: #ffd71d;"></i> &nbsp; ROPA INDUSTRIAL</h4></a></div>
+      </div>
+
+      <div class="col-lg-2"x><!--CONTACTANOS--> 
+        <div class="section-description2" style="color: white;"><h5><strong>CONT&Aacute;CTANOS</strong></h5></div>
+        <div class="section-title-divider-3"></div>
+        <div class="section-title-dividerf"></div>
+        <div class="descrip">
+          <a style="color:white;">
+            <h4 style="font-size: 11px;"> 
+              <a style="color:white; font-size: 11px;" href="https://api.whatsapp.com/send?phone=51955302160" target="_blank"><i class="fa-solid fa-phone" style="color: #ffd71d;"></i> &nbsp; 955 302 160</a><br><br>
+              <a style="color:white; font-size: 11px;"><i class="fa-solid fa-phone" style="color: #ffd71d;"></i> &nbsp; (01) 502 2587<br><br></a>
+              <a style="color:white; font-size: 11px;"><i class="fa-solid fa-envelope" style="color: #ffd71d;"></i> &nbsp; ventas@truckmin.pe<br><br></a>
+              <a style="color:white; font-size: 11px;" href="https://maps.app.goo.gl/4Jnt364Dh73x69TW8" target="_blank">
+                <i class="fa-solid fa-location-dot" style="color: #ffd71d;"></i> &nbsp;&nbsp; Calle Chinchon 858
+                  <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Oficina E - Piso 3
+                  <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; San Isidro - Lima - Per&uacute;
+              </a><br><br>
+              <a style="color:white; font-size: 11px;" href="https://maps.app.goo.gl/ynEB5mjoxmAW3xX3A" target="_blank">
+                <i class="fa-solid fa-location-dot" style="color: #ffd71d;"></i> &nbsp;&nbsp; Calle Ayacucho 230
+                  <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Oficina 204
+                  <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Cusco - Per&uacute;
+            </h4>
+          </a>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="section-title-divider-3"></div>
+
+      <div class="copyright">
+        <div class="col-md-5">
+          <div class="" style="margin-top: 12px; font-size: 12px; text-align: left;">
+            &copy; Copyright <strong>Truckmin Group Perú</strong>. Todos los derechos reservados.
+          </div>
+        </div>
+         <form action="reclamos.php" method="post">
+                    <div class="col-md-4">
+                        <button type="submit" class="libro">
+                            <img src="img/reclamaciones.png">
+                            <span></i>&nbsp;&nbsp;Libro de reclamaciones</span>
+                        </button>
+                    </div>
+                </form>
+        <div class="col-md-3"> 
+          <a class="btn" href="https://m.facebook.com/profile.php/?id=100065113025557" target="_blank">
+            <i class="fa-brands fa-square-facebook fa-lg"></i>
+          </a>
+          <a class="btn" href="https://api.whatsapp.com/send?phone=51955302160" target="_blank">
+            <i class="fa-brands fa-whatsapp fa-lg"></i>
+          </a>
+          <a class="btn" href="https://www.instagram.com/truckmingroupperu" target="_blank">
+            <i class="fa-brands fa-instagram fa-lg"></i>
+          </a>
+        </div>
+      </div>
+</foot>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+  
+  </div>
+</footer>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    // Obtén los elementos de los botones de radio
+    var radioCabeza = document.getElementById("flexRadioDefault1");
+    var radioManos = document.getElementById("flexRadioDefault2");
+    var radioPies = document.getElementById("flexRadioDefault3");
+    var radioRopa = document.getElementById("flexRadioDefault4");
+
+    // Agrega eventos de clic a los botones de radio
+    radioCabeza.addEventListener("click", function() {
+      window.location.href = "cabeza.html";
+    });
+
+    radioManos.addEventListener("click", function() {
+      window.location.href = "mano.html";
+    });
+
+    radioPies.addEventListener("click", function() {
+      window.location.href = "pie.html";
+    });
+
+    radioRopa.addEventListener("click", function() {
+      window.location.href = "ropa.html";
+    });
+  });
+</script>
+<div class="whatsapp_chat_support wcs_fixed_right body-chatbot" id="button-w">
+
+    <div class="wcs_button wcs_button_circle">
+        <img class="fa" src="img/icon/img-chatbot.png" width="70px" height="70px">
+    </div>
+
+    <div class="wcs_popup content-chatbot">
+        <div class="wcs_popup_close">
+            <span class="fa fa-close" style="color: #20212B;"></span>
+        </div>
+
+        <div class="wcs_popup_header">
+            <div class="img-chatbot"
+                style="width: 100px; height: 100px; border-radius: 100px; margin-top:-50px; padding: 10px; background-color: #ffffff; display: inline-flex;">
+                <img src="img/icon/img-chatbot.png"
+                    style="width: 80px; height: 80px; border-radius: 80px; object-fit: contain;" />
+            </div>
+            <div class="text-chatbot">
+                <strong>¿Necesitas ayuda?</strong>
+                <p style="color: black;">Chatea con nosotros</p>
+            </div>
+
+            <div class="social-chatbot">
+                <div class="click-modal2" id="sale_button"
+                    onclick="window.open('https://api.whatsapp.com/send?phone=51955302160', '_blank');"
+                    style="background-color: #00c132;">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="23" viewBox="0 0 22 23">
+                        <g fill="#FFF" fill-rule="evenodd">
+                            <path
+                                d="M15.98 13.193c-.274-.136-1.614-.796-1.864-.887-.25-.09-.432-.136-.614.137-.18.273-.704.887-.863 1.07-.159.18-.318.203-.59.067-.273-.137-1.152-.425-2.194-1.353-.81-.723-1.357-1.616-1.516-1.888-.159-.273-.002-.407.12-.557.288-.358.59-.75.681-.932.091-.182.045-.34-.023-.478-.068-.136-.613-1.478-.84-2.024-.222-.53-.447-.459-.614-.468a12.322 12.322 0 0 0-.523-.009c-.18 0-.477.068-.727.341s-.954.932-.954 2.274.977 2.638 1.113 2.82c.137.182 1.923 2.935 4.658 4.116.651.28 1.16.448 1.555.574.653.207 1.247.178 1.717.108.524-.078 1.613-.66 1.841-1.296.227-.637.227-1.183.158-1.296-.068-.114-.249-.182-.522-.319">
+                            </path>
+                            <path
+                                d="M11.004 19.984H11a9.062 9.062 0 0 1-4.616-1.264l-.331-.196-3.433.9.916-3.346-.215-.343a9.041 9.041 0 0 1-1.387-4.826c.002-4.999 4.071-9.066 9.074-9.066a9.01 9.01 0 0 1 6.412 2.659 9.009 9.009 0 0 1 2.654 6.415c-.002 5-4.071 9.067-9.07 9.067m7.72-16.785A10.845 10.845 0 0 0 11.004 0C4.989 0 .094 4.894.091 10.909c0 1.922.502 3.799 1.457 5.453L0 22.016l5.785-1.517A10.91 10.91 0 0 0 11 21.827h.004c6.015 0 10.911-4.894 10.913-10.91a10.844 10.844 0 0 0-3.193-7.718">
+                            </path>
+                        </g>
+                    </svg> <a href="javascript:;"
+                        style="text-decoration: none; padding-left: 10px; color: white;">Whatsapp</a>
+                </div>
+                <div class="click-modal2" id="sale_button"
+                    onclick="window.open('https://www.facebook.com/truckmingroupperu/?locale=es_LA', '_blank');"
+                    style="background-image: linear-gradient(to right, #4b87ff, #c33fdc, #fb5d7b);">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" viewBox="0 0 23 23">
+                        <path
+                            d="m18.112 8.446-3.324 5.274a1.698 1.698 0 0 1-2.455.453L9.69 12.19a.68.68 0 0 0-.818.002l-3.571 2.71c-.477.362-1.099-.209-.78-.715l3.324-5.274a1.698 1.698 0 0 1 2.455-.452l2.644 1.982a.68.68 0 0 0 .818-.002l3.57-2.71c.477-.361 1.099.209.78.715M11.317 0C4.942 0 0 4.67 0 10.977c0 3.299 1.352 6.15 3.554 8.119a.9.9 0 0 1 .304.645l.062 2.013a.906.906 0 0 0 1.27.801l2.246-.992a.906.906 0 0 1 .605-.044c1.032.284 2.131.435 3.276.435 6.374 0 11.316-4.67 11.316-10.977S17.691 0 11.317 0"
+                            fill="#FFF" fill-rule="evenodd"></path>
+                    </svg> <a href="javascript:;"
+                        style="text-decoration: none; padding-left: 10px; color:white;">Messenger</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+  
+
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<!-- jQuery 1.8+ -->
+<script src="plugin/components/jQuery/jquery-1.11.3.min.js"></script>
+<!-- Plugin JS file whatsapp -->
+<script src="plugin/components/moment/moment.min.js"></script>
+<script src="plugin/components/moment/moment-timezone-with-data.min.js"></script> <!-- spanish language (es) -->
+<script src="plugin/whatsapp-chat-support.js"></script>
+<!-- Required JavaScript Libraries -->
+<script src="lib/jquery/jquery.min.js"></script>
+<script src="lib/bootstrap/js/bootstrap.min.js"></script>
+<script src="lib/superfish/hoverIntent.js"></script>
+<script src="lib/superfish/superfish.min.js"></script>
+<script src="lib/morphext/morphext.min.js"></script>
+<script src="lib/wow/wow.min.js"></script>
+<script src="lib/stickyjs/sticky.js"></script>
+<script src="lib/easing/easing.js"></script>
+<script src="js/vuelve.js"></script>
+
+<!-- Template Specisifc Custom Javascript File -->
+<script src="js/custom.js"></script>
+
+<script src="contactform/contactform.js"></script>
+<script src="js/whatsapp-chat-support.js"></script>
+<script>
+    $('#button-w').whatsappChatSupport({
+        defaultMsg: '',
+    });
+</script>
+
+</body>
+
+</html>
